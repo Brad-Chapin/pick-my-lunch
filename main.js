@@ -1,17 +1,15 @@
 $( document ).ready(function() {
-  let choices = $("#options");
-  let list = choices.split(" ");
-  let final ="";
   $("#pick").on("click", function (){
     event.preventDefault();
-    let n = list.length;
-    let x = (Math.floor(Math.random()*n));
-    final = list[x];
-    $("#lunch").val() = "Your lunch today will be " + final;
+    let choices = $("#options").val().split(" ");
+    if (choices.length < 2){
+      $("#zero").removeClass("hide");
+    } else {
+      let n = choices.length;
+      let x = (Math.floor(Math.random()*n));
+      $("#lunch").text("Your lunch today will be " + choices[x] + "!");
+      $("#zero").addClass("hide");
+      $("#thank").removeClass("hide");
+    }
   });
-
-  function rnd (n) {
-    let num = (Math.floor(Math.random() * n) +1);
-    return n;
-  }
 });

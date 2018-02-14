@@ -17,13 +17,13 @@
   <h3 class="center">Taking the pain out of choosing a lunch spot since 2018.</h3>
   <hr>
   <p class="mrgn center">Picky eaters in your group? Too many options for lunch in your area?</p>
-  <br>
   <p class="mrgn center">Or maybe there are too many of you, and you can't get everyone on the same page.</p>
-  <br>
-  <p class="mrgn center">No matter! PICK MY LUNCH is here to help! Simply enter a set of choices in the form below, and click submit. PICK MY LUNCH will pick one at random for you!</p>
+  <p class="mrgn center">No matter! PICK MY LUNCH is here to help!</p>
+  <p class="mrgn center">Simply enter a set of choices in the form below, and click submit. PICK MY LUNCH will pick one at random for you!</p>
   <hr>
-  <form>
-      <p class="center mrgn">Separate your choices with a single space!</p>
+  <form class="center">
+      <p class="center mrgn">Separate your choices with a single space! Entries with multiple words should  use hyphens!</p>
+      <p class="mrgn center hide" id="zero">Sorry, you didn't enter any choices, so I can't pick one. Try again, please.</p>
     <div>
       <label for="options">Enter your choices here: </label>
       <input type="text" id="options" name="list">
@@ -32,7 +32,8 @@
       <button id="pick">Pick One!</button>
     </div>
   </form>
+  <hr>
   <p class="mrgn center" id="lunch"></p>
-  <p class="mrgn center" id="thank">Thanks for using PICK.MY.LUNCH. Enjoy!</p>
+  <p class="mrgn center hide" id="thank">Thanks for using PICK.MY.LUNCH. Enjoy!</p>
 </body>
 </html>
